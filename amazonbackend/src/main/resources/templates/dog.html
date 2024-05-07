@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" th:href="@{/css/style.css}"/>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  
+</head>
+<body>
+  
+    <header>
+      <div class="navbar">
+           <div class="nav-logo border">
+               <div class="logo"></div>
+
+           </div>
+           <div class="nav-address border">
+              <p class="add-first">Deliver to </p>      
+        
+          <div class="add-icon">
+            <i class="fa-solid fa-location-dot"></i>
+            <p class="add-sec"> India</p>
+          </div>
+        
+        </div>
+
+        
+      <div class="nav-search">
+        <select class="search-select">
+            <option>all</option>
+        </select>
+        <input placeholder="Search Amazon" class="search-input">
+        <div class="search-icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+      </div>
+    
+      <div class="nav-singin border">
+        <a th:href="@{/login}">Hello, sign in</a>
+        <a th:href="@{/signup}"> sign up</a>
+       <p class="nav-sec">Account & Lists</p>
+      </div>
+
+      <div class="nav-return border">
+        <p><span>Return</span></p>
+       <p class="nav-sec">& Orders</p>
+      </div>
+      <div class="nav-cart border">
+        <i class="fa-solid fa-cart-shopping"></i>
+          cart
+      </div>
+      </div>
+
+      <div class="pannel">
+        <div class="pannel-all">
+          <i class="fa-solid fa-bars"></i>
+          All
+        </div>
+        <div class="pannel-ops">
+		<a th:href="@{/index}">Home</a>
+          <p>
+            Amazon miniTV</p>
+          <p> Sell</p>
+            <p>Best Sellers</p>
+            <p>Mobiles</p>
+           
+        </div>
+
+        <div class="panel-deals">
+          Shop deals in Electronics
+        </div>
+      </div>
+   </header>
+
+<div class="hero-section6">
+  <div class="hero-msg">
+    <p>You are on amazon.com. You can also shop on Amazon India for millions of products with fast local delivery.<a> Click here to go to amazon.in </a>
+  </p>
+</div>
+</div>
+
+<div class="shop-section">
+  <div class="box1 box">
+    <div class="box-content">
+   <h2>Shop Pet supplies</h2>
+   <div class="box-img" style="background-image: url('image/d1.jpg');"></div>
+ <a href="toys.html" id="payment_field" >1100</a> Rs/.only
+          
+ <button  onclick="paymentStart()" class="btn btn-success btn-block">Pay</button>
+  </div>
+  </div>
+  <div class="box2 box"><div class="box-content">
+    <h2>Shop Pet supplies</h2>
+    <div class="box-img" style="background-image: url('image/d2.jpg');"></div>
+    <a href="toys.html">1200 Rs/.only</a>
+    <button class="btn">Buy This</button>
+   </div></div>
+  <div class="box3 box"><div class="box-content">
+    <h2>Shop Pet supplies</h2>
+    <div class="box-img" style="background-image: url('image/d3.jpg');"></div>
+    <a href="toys.html">1400 Rs/.only</a>
+    <button class="btn">Buy This</button>
+   </div></div>
+  <div class="box4 box"><div class="box-content">
+    <h2>Shop Pet supplies</h2>
+    <div class="box-img" style="background-image: url('image/d4.jpg');"></div>
+    <a href="toys.html">1500 Rs/.only</a>
+    <button class="btn">Buy This</button>
+   </div></div>
+
+
+
+   <div class="box1 box">
+    <div class="box-content">
+   <h2>Shop Pet supplies</h2>
+   <div class="box-img" style="background-image: url('image/d5.jpg');"></div>
+   <a href="toys.html">1200 Rs/.only</a>
+          <button class="btn">Buy This</button>
+  </div>
+  </div>
+  <div class="box2 box"><div class="box-content">
+    <h2>Shop Pet supplies</h2>
+    <div class="box-img" style="background-image: url('image/d6.jpg');"></div>
+    <a href="toys.html">1300 Rs/.only</a>
+    <button class="btn">Buy This</button>
+   </div></div>
+  <div class="box3 box"><div class="box-content">
+    <h2>Shop Pet supplies</h2>
+    <div class="box-img" style="background-image: url('image/d7.jpg');"></div>
+    <a href="toys.html">1900 Rs/.only</a>
+    <button class="btn">Buy This</button>
+   </div></div>
+  <div class="box4 box"><div class="box-content">
+    <h2>Shop Pet supplies</h2>
+    <div class="box-img" style="background-image: url('image/d8.jpg');"></div>
+    <a href="toys.html">2300 Rs/.only</a>
+          <button class="btn">Buy This</button>
+   </div></div>
+
+</div>
+
+<footer>
+<div class="foot-pannel">
+  Back to Top
+</div>
+
+      <div class="foot-pannel2">
+        <ul>
+          <p>Get to Know Us</p>
+          <a>Careers</a>
+          <a>Blog</a>
+          <a>About Amazon</a>
+          <a>Investor Relations</a>
+          <a>Amazon Devices</a>
+        </ul>
+
+        <ul>
+          <p>Make Money with Us</p>
+          <a>Sell products on Amazon</a>
+          <a>Sell apps on Amazon</a>
+          <a>Become an Affiliate</a>
+          <a>Advertise Your Products</a>
+          <a>Self-Publish with Us</a>
+        </ul>
+        <ul>
+          <p>Let Us Help You</p>
+          <a>Amazon and COVID-19</a>
+          <a>Your Account</a>
+          <a>Your Orders</a>
+          <a>Shipping Rates & Policies</a>
+          <a>Returns & Replacements</a>
+        </ul>
+
+        <ul>
+          <p>	
+            Amazon Payment Products</p>
+          <a>Amazon Business Card</a>
+          <a>Shop with Points</a>
+          <a>Reload Your Balance</a>
+          <a>Amazon Currency Converter</a>
+        </ul>
+      </div>
+
+<div class="foot-pannel3">
+  <div class="logo">
+
+  </div>
+</div>
+
+   <div class="foot-pannel4">
+    <div class="pages">
+     <a>Conditions of Use</a>
+     <a>Privacy Notice</a>
+     <a>Your Ads Privacy Choices</a>
+    </div>
+    <div class="copyright">
+      © 1996-2023, Amazon.com, Inc. or its affiliates
+    </div>
+   </div>
+
+</footer>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+          <script th:src="@{/js/js.js}"></script>
+</body>
+</html>
